@@ -253,11 +253,11 @@ int subLista(Lista *l1, Lista *l2, int inicio, int fim){
     }
     int i;
     noLista *aux1, *aux2, *ant;
+	aux1=l1->head;
     if(inicio>=fim){
         
 	while(inicio>=fim){
 		i=fim;
-        	aux1 = l1->head;
 		
 		while(i != inicio+1){
             		ant=aux1;
@@ -268,8 +268,7 @@ int subLista(Lista *l1, Lista *l2, int inicio, int fim){
 		inicio--;
     	}
     }else{
-        i=inicio;
-        aux1 = l1->head;
+        i=1;
         while(i != inicio+1){
             	ant = aux1;
 		aux1 = aux1->prox;
