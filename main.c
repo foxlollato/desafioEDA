@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "listaEncadeada.h"
 
-#define qtde 5
+#define qtde 10
 
 main(){
     struct elemento vetAlunos[qtde] = {
@@ -10,14 +10,24 @@ main(){
                         {3},
                         {5},
                         {7},
-                        {9}
+                        {9},
+			{11},
+                        {13},
+                        {15},
+                        {17},
+                        {19}
 	};
     struct elemento vetAlunos2[qtde] = {
 			{2},
-                        {4},
                         {6},
+                        {10},
+                        {14},
+                        {18},
+                        {4},
                         {8},
-                        {10}
+                        {12},
+                        {16},
+                        {20}
 	};
 
     	Lista *inicio = criaLista(); //cria ponteiro especial (inicio**) que aponta
@@ -29,6 +39,7 @@ main(){
     for(i=0; i < qtde; i++){
         insereFinal(inicio, vetAlunos[i]);
 	insereFinal(l2, vetAlunos2[i]);
+	
 	}
 	
 	imprimeLista(inicio);
@@ -39,7 +50,7 @@ main(){
 
 
 
-	subLista(inicio,l2,5,4);
+	subLista(inicio,l2,4,8);
 
    	imprimeLista(l2);
     	printf(" --> Tamanho atual da lista: %d\n", tamLista(l2));
