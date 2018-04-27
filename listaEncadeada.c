@@ -253,32 +253,31 @@ int subLista(Lista *l1, Lista *l2, int inicio, int fim){
     }
     int i;
     noLista *aux1, *aux2, *ant;
-
     if(inicio>=fim){
-        i=fim;
-        aux1 = l1->head;
-        while(i != fim+1){
-            aux1 = aux1->prox;
-            i++;
-        }
-        aux2=aux1;
-
-        while(i != inicio+1){
-            insereFinal(l2, aux2->dado);
-            aux2 = aux2->prox;
-            i++;
-        }
-    }
-    if(inicio<fim){
+        
+	while(inicio>=fim){
+		i=fim;
+        	aux1 = l1->head;
+		
+		while(i != inicio+1){
+            		ant=aux1;
+			aux1=aux1->prox;
+			i++;
+        	}			
+            	insereFinal(l2, ant->dado);
+		inicio--;
+    	}
+    }else{
         i=inicio;
         aux1 = l1->head;
         while(i != inicio+1){
-            aux1 = aux1->prox;
-            i++;
+            	ant = aux1;
+		aux1 = aux1->prox;
+           	 i++;
         }
-        aux2=aux1;
+        aux2=ant;
 
-        while(i != fim+1){
+        while(i <= fim+1){
             insereFinal(l2, aux2->dado);
             aux2 = aux2->prox;
             i++;

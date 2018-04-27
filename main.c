@@ -39,7 +39,7 @@ main(){
 
 
 
-	subLista(inicio,l2,1,3);
+	subLista(inicio,l2,1,5);
 
    	imprimeLista(l2);
     	printf(" --> Tamanho atual da lista: %d\n", tamLista(l2));
